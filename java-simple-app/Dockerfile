@@ -1,5 +1,5 @@
 FROM eclipse-temurin:17-jdk
 WORKDIR /app
-COPY HelloWorld.java .
+COPY java-simple-app/HelloWorld.java .
 RUN javac HelloWorld.java
 CMD ["java", "HelloWorld"]
