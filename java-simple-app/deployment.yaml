@@ -1,0 +1,20 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: java-simple-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: java-simple
+  template:
+    metadata:
+      labels:
+        app: java-simple
+    spec:
+      containers:
+      - name: java-simple
+        image: 
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
